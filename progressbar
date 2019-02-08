@@ -49,7 +49,7 @@ done
 
 
 if [ -p /dev/stdin ]; then
-  value=$(cat /dev/stdin)
+  value=$(cat /dev/stdin | tr -d % | tr -d '\n')
 else
   value=$(echo $1 | tr -d %)
 fi
