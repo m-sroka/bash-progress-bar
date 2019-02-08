@@ -6,7 +6,7 @@ getColor() {
     red) color="1;31m";;
     green) color="1;32m";;
     blue) color="1;34m";;
-    brown) color="1;33m";;
+    brown) color="0;33m";;
     yellow) color="1;33m";;
     white) color="1;37m";;
   esac
