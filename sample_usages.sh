@@ -15,10 +15,11 @@ declare -a arr=(
 printf '\n\n'
 for cmd in "${arr[@]}"
 do
-  printf '  '
+  printf '\e[34m  ~ '
+  tput sgr0
   echo $cmd
   echo
-  printf '  '
+  printf '     '
   eval "./${cmd}"
   printf '\n\n\n\n'
 done
