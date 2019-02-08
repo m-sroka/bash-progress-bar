@@ -26,6 +26,8 @@ usage: progress-bar [VALUE], VALUE percentage value, e.g. 10%, 50%, 100%, 110%
   -c [COLOR] black|red|green|blue|brown|yellow|white
 
 ```
+or pipe:
+`echo 20 | progressbar -color red`
 
 ### Sample usage ###
 ![samples images](https://raw.githubusercontent.com/m-sroka/bash-progress-bar/master/samples.png)

@@ -46,7 +46,13 @@ while getopts 'als:c:w:h' OPT ${@:2}; do
 
   esac
 done
-value=$(echo $1 | tr -d %)
+
+
+if [ -p /dev/stdin ]; then
+  value=$(cat /dev/stdin)
+else
+  value=$(echo $1 | tr -d %)
+fi
 
 
 let step_size=100/$granularity
