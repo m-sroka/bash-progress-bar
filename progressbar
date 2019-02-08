@@ -27,12 +27,11 @@ printHelp() {
 }
 
 # DEFAULT CONFIG PARAMETERS
-DEFAULT_COLOR=`getColor 'white'`
+color=
 allow_more_than_max=false
 character=■
 granularity=10
 append_numeric_after_progressbar=false
-color=$DEFAULT_COLOR
 
 # PARSE ARGS
 while getopts 'als:c:w:h' OPT ${@:2}; do
@@ -53,7 +52,10 @@ value=$(echo $1 | tr -d %)
 let step_size=100/$granularity
 let num_of_progress_items=$value/$step_size
 
-printf ${color}
+if [ "$color" ]
+then
+  printf $color
+fi
 
 printf '|'
 for i in $(seq 0 $granularity)
