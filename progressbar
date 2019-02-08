@@ -80,3 +80,4 @@ then
 fi 
 
 eval "tput sgr0" # reset color
+echo
