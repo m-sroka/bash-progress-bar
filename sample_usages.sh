@@ -12,11 +12,13 @@ declare -a arr=(
 'progressbar 70% -w 😼'
 )
 
-
+printf '\n\n'
 for cmd in "${arr[@]}"
 do
+  printf '  '
   echo $cmd
   echo
+  printf '  '
   eval "./${cmd}"
   printf '\n\n\n\n'
 done
