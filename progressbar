@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 getColor() {
   case "$1" in
     black) color="0;30m";;
@@ -13,10 +12,6 @@ getColor() {
   esac
   echo "\033[$color"
 }
-DEFAULT_COLOR=`getColor 'white'`
-
-
-# PARSE ARGS
 
 printHelp() {
   echo
@@ -30,12 +25,14 @@ printHelp() {
 }
 
 # DEFAULT CONFIG PARAMETERS
+DEFAULT_COLOR=`getColor 'white'`
 allow_more_than_max=false
 character=■
 granularity=10
 append_numeric_after_progressbar=false
 color=$DEFAULT_COLOR
 
+# PARSE ARGS
 while getopts 'als:c:w:h' OPT ${@:2}; do
   case "$OPT" in
     "l") allow_more_than_max=true ;;
@@ -48,14 +45,11 @@ while getopts 'als:c:w:h' OPT ${@:2}; do
 
   esac
 done
-
-
-
 value=$(echo $1 | tr -d %)
+
 
 let step_size=100/$granularity
 let num_of_progress_items=$value/$step_size
-
 
 printf ${color}
 
@@ -81,5 +75,4 @@ then
   printf ' %d%%' $value
 fi 
 
-
-
+eval "tput sgr0" # reset color
