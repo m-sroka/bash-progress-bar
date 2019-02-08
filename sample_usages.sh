@@ -2,14 +2,15 @@
 
 
 declare -a arr=(
-'progressbar 70%'
-'progressbar 70% -s 40'
-'progressbar 50% -a'
- 'progressbar 150%'
-'progressbar 150% -l'
-'progressbar 150% -c blue'
-'progressbar 80% -c brown'
-'progressbar 70% -w 😼'
+'./progressbar 70%'
+'echo 70 | ./progressbar -c red'
+'./progressbar 70% -s 40'
+'./progressbar 50% -a'
+'./progressbar 150%'
+'./progressbar 150% -l'
+'./progressbar 150% -c blue'
+'./progressbar 80% -c red'
+'./progressbar 70% -w 😼'
 )
 
 printf '\n\n'
@@ -20,6 +21,6 @@ do
   echo $cmd
   echo
   printf '     '
-  eval "./${cmd}"
-  printf '\n\n\n\n'
+  eval "${cmd}"
+  printf '\n\n\n'
 done
