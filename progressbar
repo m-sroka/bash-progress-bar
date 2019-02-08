@@ -17,6 +17,8 @@ printHelp() {
   echo
   echo 'usage: progress-bar [VALUE], VALUE percentage value, e.g. 10%, 50%, 100%, 110%'
   echo
+  echo '  -h help'
+  echo
   echo '  -l long output - allow more than 100%'
   echo '  -s [SIZE], SIZE number of ■ showed when value is 100 (default: 10)'
   echo '  -w [CHARACTER], CHARACTER characted that is being shown as progress bar tile (default: ■)'
