@@ -1,8 +1,10 @@
 # README #
 
-### What is this repository for? ###
+### What is this ###
 
 * Simple progress bar for bash
+
+![samples intro images](https://raw.githubusercontent.com/m-sroka/bash-progress-bar/master/samples_intro.png)
 
 ### How do I get set up? ###
 1. Clone repository
